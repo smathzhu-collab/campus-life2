@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>校园生活 · 校园生活</title>
+  <meta name="description" content="一个关于校园生活的单页网站：社团、活动、学习、食堂与校园风景。"/>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo" aria-label="站点标志">
+          <div class="badge" aria-hidden="true"></div>
+          <div>
+            <div style="font-size:14px; opacity:.92;">校园生活</div>
+            <div style="font-size:12px; color:var(--muted); font-weight:600;">校园生活主页</div>
+          </div>
+        </div>
+        <div class="navlinks" role="navigation" aria-label="主导航">
+          <a href="#features">生活速览</a>
+          <a href="#events">活动日历</a>
+          <a href="#gallery">校园影集</a>
+                  </div>
+        <div class="cta">
+          <button class="btn ghost" id="randomTipBtn" title="随机一条校园小贴士">🎲 小贴士</button>
+          <a class="btn" href="#events">查看活动</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="h-card hero-left">
+            <div class="floaty" aria-hidden="true"></div>
+            <div class="kicker"><span class="dot" aria-hidden="true"></span>今日校园心情：把平凡过成闪光</div>
+            <h1>把校园生活，做成一张会发光的「名片」</h1>
+            <p class="sub">
+              这里收录了社团、活动、学习与食堂的日常灵感。你可以用它做课程作业、社团展示页，或当作个人作品集的一部分。
+            </p>
+
+            <div class="chips" aria-label="关键词">
+              <span class="chip">📚 自习效率</span>
+              <span class="chip">🎭 社团与兴趣</span>
+              <span class="chip">🏀 运动与健康</span>
+              <span class="chip">🍜 食堂雷达</span>
+              <span class="chip">🌙 夜跑与晚风</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn" href="#gallery">先逛影集</a>
+              <a class="btn ghost" href="#features">了解更多</a>
+            </div>
+
+            <div class="mini" aria-label="亮点数据">
+              <div class="stat">
+                <b id="stat1">3</b> 个推荐路线
+                <div>晨跑 / 午后自习 / 夜间散步，随时切换。</div>
+              </div>
+              <div class="stat">
+                <b id="stat2">8</b> 条校园小贴士
+                <div>从抢座位到找自习室的「软技能」。</div>
+              </div>
+              <div class="stat">
+                <b id="stat3">12</b> 张照片
+                <div>校园风景 + 生活瞬间，一键浏览。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="h-card photo" aria-label="校园主图">
+              <div class="label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                校园学习区 · Study Zone
+              </div>
+            </div>
+
+            <div class="h-card quick">
+              <div class="searchbox" role="search">
+                <span aria-hidden="true">🔎</span>
+                <input id="searchInput" placeholder="搜索：社团 / 自习 / 食堂 / 运动…" />
+              </div>
+              <div class="hint" id="searchHint">
+                试试输入：<b>自习</b>、<b>社团</b>、<b>晚风</b> 或 <b>食堂</b>。下面的卡片会高亮匹配内容。
+              </div>
+              <div class="hint" style="opacity:.9">
+                ✅ 本页面为纯前端单页：可直接打开、也可作为作业提交。  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>生活速览</h2>
+            <p>用四张卡片，快速把校园生活讲清楚。</p>
+          </div>
+          <p class="small">提示：上方搜索框可高亮匹配内容</p>
+        </div>
+
+        <div class="grid" id="featureGrid">
+          <article class="card" data-tags="自习 学习 图书馆 课程">
+            <div class="icon" aria-hidden="true">📚</div>
+            <h3>学习 & 自习</h3>
+            <p>把大任务拆成 25 分钟的小块；把复习变成「可完成的清单」，你会更轻松更有掌控感。</p>
+          </article>
+
+          <article class="card" data-tags="社团 兴趣 音乐 朋友">
+            <div class="icon" aria-hidden="true">🎭</div>
+            <h3>社团 & 兴趣</h3>
+            <p>新学期试着加入一个社团：摄影、舞蹈、辩论或志愿者。你会更快找到同频的朋友。</p>
+          </article>
+
+          <article class="card" data-tags="食堂 美食 咖啡 奶茶">
+            <div class="icon" aria-hidden="true">🍜</div>
+            <h3>食堂 & 美食</h3>
+            <p>把「常吃的三家」做成备选清单：一份稳定、一份冒险、一份省钱。幸福感会更可持续。</p>
+          </article>
+
+          <article class="card" data-tags="运动 夜跑 篮球 健身 健康">
+            <div class="icon" aria-hidden="true">🏀</div>
+            <h3>运动 & 健康</h3>
+            <p>每周两次轻运动就能明显改善状态：晚饭后散步、操场慢跑、或跟朋友打一场球。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>活动日历</h2>
+            <p>近期校园活动与日程一览。</p>
+          </div>
+          <p class="small">点击「🎲 小贴士」获取灵感</p>
+        </div>
+
+        <div class="grid">
+          <div class="events" aria-label="活动列表">
+            <ul id="eventList"></ul>
+          </div>
+
+          <aside class="side" aria-label="推荐路线">
+            <div class="img"></div>
+            <div class="body">
+              <h3>三段式校园路线</h3>
+              <p>把一天拆成三段：给学习留空间，也给生活留呼吸。适合做作业展示的「校园生活模型」。</p>
+              <div class="pillrow">
+                <span class="pill">🌤 晨间：操场慢跑</span>
+                <span class="pill">☕ 午后：图书馆自习</span>
+                <span class="pill">🌙 夜晚：校园散步</span>
+              </div>
+              <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="btn" id="addEventBtn">+ 添加示例活动</button>
+                <button class="btn ghost" id="resetEventBtn">↺ 重置列表</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>校园影集</h2>
+            <p>点击照片可放大预览（图片来自 Unsplash）。</p>
+          </div>
+          <p class="small">共 <span id="galleryCount">12</span> 张</p>
+        </div>
+
+        <div class="gallery" id="galleryGrid"></div>
+      </div>
+    </section>
+
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="图片预览弹窗">
+      <div class="box">
+        <div class="top">
+          <b id="modalTitle">图片预览</b>
+          <button class="x" id="closeModalBtn" aria-label="关闭">✕</button>
+        </div>
+        <div class="img" id="modalImg"></div>
+        <div class="cap" id="modalCap"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div class="logo">
+          <div class="badge" aria-hidden="true"></div>
+          <div>
+            <div style="font-size:13px; font-weight:900;">校园生活</div>
+            <div class="small">校园生活主题展示页</div>
+          </div>
+        </div>
+        <div class="small">
+          © <span id="year"></span> · 校园生活 · 每日灵感
+          <span style="opacity:.85">（图片：Unsplash）</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
